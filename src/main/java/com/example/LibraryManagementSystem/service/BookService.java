@@ -41,7 +41,7 @@ public class BookService {
 	
 	public Book findBookById(int bookId) {
 		 return BookRepository.findById(bookId)
-	                .orElseThrow(() -> new ResourceNotFoundException("Book not found with ISBN: " + bookId));
+	                .orElseThrow(() -> new ResourceNotFoundException("Book not found with Id: " + bookId));
 	}
 	
 	public void deleteBook(int id)
